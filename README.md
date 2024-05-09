@@ -1,6 +1,6 @@
 # Find a Pet Shop
 
-Este é um projeto para encontrar o pet shop ideal para o seu cão, considerando a data do banho, o número de cachorros pequenos e grandes que você possui.
+Este é um projeto para encontrar o pet shop ideal para o seu cão, considerando a data do banho, o número de cachorros pequenos e grandes que você possui. Além de levar em conta o dia da semana, que influencia no preço para cada tamanho de cachorro, em 3 pet shops diferentes. Usando como critério de desempate a distância de cada pet shop.
 
 ## Instruções para Executar o Sistema
 
