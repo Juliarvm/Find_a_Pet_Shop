@@ -2,65 +2,46 @@
 .PetshopSelector label,
 .PetshopSelector input,
 .PetshopSelector button {
-  /* Estilos comuns para labels, inputs e botões dentro do componente */
+  
 }
 
 /* Ajustes de tamanho específicos para cada tipo de texto */
 .PetshopSelector label {
   font-size: 25px;
-  /* Tamanho da fonte */
 }
 
 .PetshopSelector input {
   font-size: 18px;
-  /* Tamanho da fonte */
 }
 
 .PetshopSelector button {
   background-color: transparent;
-  /* Define a cor de fundo como transparente */
   border: none;
-  /* Remove a borda do botão */
   padding: 0;
-  /* Remove o preenchimento interno do botão */
   transition: transform 0.3s ease;
-  /* Adiciona uma transição na propriedade transform */
 }
 
 /* Efeito de diminuir no botão quando clicado */
 .PetshopSelector button:active {
   transform: scale(0.80);
-  /* diminuir o botão para 80% do tamanho original quando estiver ativo (clicado) */
 }
 
 .PetshopSelector input[type="number"] {
   font-size: 20px;
-  /* Tamanho da fonte para as caixas de resposta de números */
-  width: 70px;
-  /* Largura da caixa de resposta */
+  width: 50px;
 }
 
-/* Estilizando a caixa de data */
 .PetshopSelector #calendar-input {
   font-size: 18px;
-  /* Tamanho da fonte para a caixa de data */
   width: 130px;
-  /* Largura da caixa de data */
 }
 
-/* Estilizando as divs de entrada dentro do componente */
 .PetshopSelector .data-container,
 .PetshopSelector .dogs-container {
   background-color: #c3e3fd;
-  /* Cor de fundo para as divs de entrada */
   padding: 1px 8px 20px 8px;
-  /* Espaçamento interno */
   margin: 10px 500px 20px 500px;
-  /* Margem para todos os lados: superior, direita, inferior, esquerda */
   border-radius: 10px;
-  /* Borda arredondada */
   font-family: Georgia, 'Times New Roman', Times, sans-serif;
-  /* Fonte */
   font-weight: normal;
-  /* Peso da fonte */
 }

@@ -38,12 +38,28 @@ const PetshopSelector = () => {
     setTimeout(() => {
       setIsButtonAnimating(false);
     }, 1000);
+
     // Verifica se a data está preenchida
     if (!data) {
       setBestPetshop('Por favor, preencha a data antes de calcular');
-      return; // Retorna para encerrar a função sem continuar
+      return;
     }
 
+    // Verifica se a data é no futuro
+    const [year, month, day] = data.split('-').map(Number);
+    const selectedDate = new Date(year, month - 1, day); // Formato YYYY-MM-DD
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Remove as horas para comparar apenas as datas
+
+    if (selectedDate <= today) {
+      alert('A data deve ser no futuro!');
+      return;
+    }
+    // Verifica se pelo menos 1 cachorro foi selecionado
+    if (smallDogs === 0 && largeDogs === 0) {
+      alert('Você deve selecionar ao menos 1 cachorro!');
+      return;
+    }
     const calculateBestPetshop = () => {
       const [day, month, year] = data.split('/').map(Number);
       const date = new Date(year, month - 1, day);
@@ -107,13 +123,24 @@ const PetshopSelector = () => {
         />
       </div>
       <div className="dogs-container">
-        <h3>Quantidade de cães pequenos:</h3>
-        <input type="number" value={smallDogs} onChange={handleSmallDogsChange} />
-      </div>
-      <div className="dogs-container">
-        <h3>Quantidade de cães grandes:</h3>
-        <input type="number" value={largeDogs} onChange={handleLargeDogsChange} />
-      </div>
+  <h3>Quantidade de cães pequenos:</h3>
+  <input
+    type="number"
+    value={smallDogs}
+    onChange={handleSmallDogsChange}
+    min="0" // Desabilita valores negativos
+  />
+</div>
+<div className="dogs-container">
+  <h3>Quantidade de cães grandes:</h3>
+  <input
+    type="number"
+    value={largeDogs}
+    onChange={handleLargeDogsChange}
+    min="0" // Desabilita valores negativos
+  />
+</div>
+
       <h3>Calcular:</h3>
       <button
         onClick={handleButtonClick}

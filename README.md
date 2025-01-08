@@ -27,6 +27,3 @@ Este é um projeto para encontrar o pet shop ideal para o seu cão, considerando
 - O arquivo `PetshopSelector.js` contém a lógica e componentes relacionados à seleção do pet shop.
 - Os estilos CSS estão separados em arquivos como `App.css` e `PetshopSelector.css` para uma melhor organização.
 
-
-
-
