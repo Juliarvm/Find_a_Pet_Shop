@@ -30,5 +30,3 @@ Este é um projeto para encontrar o pet shop ideal para o seu cão, considerando
 
 
 
-
-
